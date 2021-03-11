@@ -1,5 +1,8 @@
-const server = require("./server.js")
+const app = require("./server.js")
 
-server.listen(1234,()=>{
-    console.log("server on 1234")
+const port = process.env.PORT || 1234
+
+app.listen(port,()=>{
+    console.log(`server alive on port ${port}`)
 })
+
